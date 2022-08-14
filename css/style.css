@@ -27,18 +27,6 @@ body {
     color: red;
 }
 
-.agencia {
-    cursor: cell;
-}
-
-.kontakt {
-    cursor: context-menu;
-}
-
-.przyczisk {
-    color: #f321d7;
-}
-
 .logo {
     position: absolute;
     width: 145px;
@@ -81,16 +69,41 @@ left: 656px;
 top: 32px;
 }
 
+.list-link {
+position: relative;
+text-decoration: none;
+}
+
+.list-link:hover {
+    color: #2196F3;
+}
+
+.list-link::after {
+    display: block;
+    position: absolute;
+    width: 0%;
+    height: 4px;
+    margin-top: 25px;
+    margin-left: 0px;
+    background: #2196F3;
+border-radius: 2px;
+content: "";
+transition: width 0.3s ease-out;
+}
+
+.list-link:focus::after,
+.list-link:hover::after {
+    width: 100%;
+}
+
+
+
 .container-poshta {
     position: absolute;
 width: 161px;
 height: 16px;
 left: 1052px;
 top: 32px;
-}
-
-.list-link:hover {
-    color: #2196F3;
 }
 
 .poshta {
@@ -106,6 +119,10 @@ font-size: 14px;
 line-height: 16px;
 letter-spacing: 0.02em;
 gap: 10px;
+}
+
+.mail {
+    fill: gray;
 }
 
 .mail:hover  {
@@ -131,12 +148,20 @@ gap: 10px;
     fill: #2196F3; 
 }
 
+.list-link1 {
+    color: #757575;
+}
+ 
+.list-link1:hover {
+    color: #2196F3;
+}
+
 /* Zamów usługe */
 
 .controls {
     max-width: 1600px; 
     max-height: 600px;
-    background-image: url("../img/image\ \(13\).jpeg"); 
+    background-image: url(../img/image\ \(13\).jpeg); 
     position: absolute;
     width: 1600px;
     height: 600px;
@@ -182,8 +207,7 @@ color: #FFFFFF;
 .lorem {
     display: flex;
     margin-top: 774px;
-    margin-left: 200px;
-    margin-right: 215px;
+    margin-left: 180px;
     margin-right: 215px;
     font-weight: 1170;
     font-size: 251;
@@ -243,15 +267,42 @@ margin-top: 65px;
 color: #212121;
 }
 
+.container-czym-się-zajmujemy {
+    box-sizing: border-box;
+}
+
 .zdięczie {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 1170px;
+    height: 294px;
     margin-top: 50px;
     margin-left: 215px;
     gap: 30px;
-    color: #FFFFFF;
 }
+
+.thumb {
+    position: relative;
+}
+
+.thumb > .label {
+    position: absolute;
+    top: 211px;
+    right: 0px;
+    width: 370px;
+    height: 70px;
+
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 70px;
+text-align: center;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color: #FFFFFF;
+    background: rgba(47, 48, 58, 0.8);
+}
+
 
 
 /* Nasz zespół */
@@ -603,7 +654,9 @@ color: #FFFFFF;
 }
 
 
+
 /* Portfolio WebStudio */
+
 
 
 .portfolio-webstudio {
@@ -611,7 +664,7 @@ color: #FFFFFF;
     background-color: #FFFFFF;
     position: absolute;
 width: 1600px;
-height: 80px;
+height: 76px;
 left: 0px;
 top: 0px;
 }
@@ -806,113 +859,291 @@ letter-spacing: 0.02em;
     color: #FFFFFF;   
 }
 
-.zdięcze1 {
-    position: absolute;
-width: 370px;
-height: 404px;
-left: 215px;
-top: 262px;
-background: #FFFFFF;
-border: 1px solid #EEEEEE;
-} 
-
-.Technocrack {
-    position: absolute;
-    width: 322px;
-    height: 36px;
-    left: 24px;
-    top: 294px;   
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 36px;
-    /* identical to box height, or 200% */   
-    letter-spacing: 0.06em;
-    color: #212121;
+.conteiner-conteiner {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 1178px;
+    height: 1280px;
+    margin-top: 262px;
+    margin-left: 215px;
 }
 
-.Strona-internetowa {
+/* conteiner-box */
+
+.conteiner-box {
+width: 370px;
+height: 404px;
+    background: #FFFFFF;
+    border: 1px double #EEEEEE;
+position: relative;
+z-index: 1;
+}
+
+
+
+.overlay {
+    position: absolute;
+    width: 370px;
+    height: 294px;
+    background-color: rgba(33, 150, 243, 0.9);      
+    transform: translate(0%, 100%);
+    transition: transform 250ms ease;
+}
+
+.overlay > .conteiner-text {
+    position: absolute;
+    width: 301px;
+    height: 196px;
+    left: 24px;
+    top: 28px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    /* or 156% */
+    
+    letter-spacing: 0.03em;
+    
+    color: #FFFFFF;
+}
+
+
+.box1 {  
+    position: relative;
+    width: 370px;
+    height: 294px;
+    background-image: url(../img/img1.1.jpg);
+    overflow: hidden;
+    background-color: #2196F3 90%;
+    overflow: hidden;
+    
+}
+
+.box1:hover .overlay {
+    transform: translateX(0);
+}
+
+
+
+.box2 {  
+    position: relative;
+    width: 370px;
+    height: 294px;
+    background-image: url(../img/img1.2.jpg);
+    overflow: hidden;
+    background-color: #2196F3 90%;
+    overflow: hidden;
+}
+
+.box2:hover .overlay {
+    transform: translate(0);
+}
+
+
+
+.box3 {  
+    position: relative;
+    width: 370px;
+    height: 294px;
+    background-image: url(../img/img1.3.jpg);
+    overflow: hidden;
+    background-color: #2196F3 90%;
+    overflow: hidden;
+}
+
+.box3:hover .overlay {
+    transform: translate(0);
+}
+
+.box4 {  
+    position: relative;
+    width: 370px;
+    height: 294px;
+    background-image: url(../img/img1.4.jpg);
+    overflow: hidden;
+    background-color: #2196F3 90%;
+    overflow: hidden;
+}
+
+.box4:hover .overlay {
+    transform: translate(0);
+}
+
+.box5 {  
+    position: relative;
+    width: 370px;
+    height: 294px;
+    background-image: url(../img/img1.5.jpg);
+    overflow: hidden;
+    background-color: #2196F3 90%;
+    overflow: hidden;
+}
+
+.box5:hover .overlay {
+    transform: translate(0);
+}
+
+.box6 {  
+    position: relative;
+    width: 370px;
+    height: 294px;
+    background-image: url(../img/img1.6.jpg);
+    overflow: hidden;
+    background-color: #2196F3 90%;
+    overflow: hidden;
+}
+
+.box6:hover .overlay {
+    transform: translate(0);
+}
+
+.box7 {  
+    position: relative;
+    width: 370px;
+    height: 294px;
+    background-image: url(../img/img1.7.jpg);
+    overflow: hidden;
+    background-color: #2196F3 90%;
+    overflow: hidden;
+}
+
+.box7:hover .overlay {
+    transform: translate(0);
+}
+
+.box8 {  
+    position: relative;
+    width: 370px;
+    height: 294px;
+    background-image: url(../img/img1.8.jpg);
+    overflow: hidden;
+    background-color: #2196F3 90%;
+    overflow: hidden;
+}
+
+.box8:hover .overlay {
+    transform: translate(0);
+}
+
+.box9 {  
+    position: relative;
+    width: 370px;
+    height: 294px;
+    background-image: url(../img/img1.9.jpg);
+    overflow: hidden;
+    background-color: #2196F3 90%;
+    overflow: hidden;
+    
+}
+
+.box9:hover .overlay {
+    transform: translate(0);
+}
+
+.zdięczie-box {
+    z-index: 2;
+}
+
+.opis-box {
+    list-style: none;
+}
+
+.Technocrack{
+    position: absolute;
+width: 322px;
+height: 36px;
+left: 249px;
+top: 560px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 36px;
+/* identical to box height, or 200% */
+
+letter-spacing: 0.06em;
+
+color: #212121;
+}
+
+.Strona-internetowa1 {
     position: absolute;
     width: 322px;
     height: 30px;
-    left: 24px;
-    top: 340px;   
+    left: 249px;
+    top: 600px;
+    
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 30px;
-    /* identical to box height, or 188% */    
-    letter-spacing: 0.03em;   
+    /* identical to box height, or 188% */
+    
+    letter-spacing: 0.03em;
+    
     color: #757575;
-}
-
-.zdięcze2 {
-    position: absolute;
-width: 370px;
-height: 404px;
-left: 615px;
-top: 262px;
-background: #FFFFFF;
-border: 1px solid #EEEEEE;
 }
 
 .Grafika {
     position: absolute;
     width: 322px;
     height: 36px;
-    left: 24px;
-    top: 294px;
+    left: 650px;
+    top: 560px;
+    
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 36px;
-    /* identical to box height, or 200% */   
-    letter-spacing: 0.06em;   
+    /* identical to box height, or 200% */
+    
+    letter-spacing: 0.06em;
+    
     color: #212121;
 }
 
-.Dizajn {
+.Dizajn1 {
     position: absolute;
     width: 322px;
     height: 30px;
-    left: 24px;
-    top: 340px;    
+    left: 650px;
+    top: 600px;
+    
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 30px;
-    /* identical to box height, or 188% */    
-    letter-spacing: 0.03em;    
+    /* identical to box height, or 188% */
+    
+    letter-spacing: 0.03em;
+    
     color: #757575;
-}
-
-.zdięcze3 {
-    position: absolute;
-width: 370px;
-height: 404px;
-left: 1015px;
-top: 262px;
-background: #FFFFFF;
-border: 1px solid #EEEEEE;
 }
 
 .Restauracja-Seafood {
     position: absolute;
     width: 322px;
     height: 36px;
-    left: 24px;
-    top: 294px;    
+    left: 1050px;
+    top: 560px;
+    
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 36px;
-    /* identical to box height, or 200% */    
-    letter-spacing: 0.06em;    
+    /* identical to box height, or 200% */
+    
+    letter-spacing: 0.06em;
+    
     color: #212121;
 }
 
@@ -920,83 +1151,75 @@ border: 1px solid #EEEEEE;
     position: absolute;
     width: 322px;
     height: 30px;
-    left: 24px;
-    top: 340px;   
+    left: 1050px;
+    top: 600px;
+    
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 30px;
-    /* identical to box height, or 188% */    
-    letter-spacing: 0.03em;    
+    /* identical to box height, or 188% */
+    
+    letter-spacing: 0.03em;
+    
     color: #757575;
-}
-
-.zdięcze4 {
-    position: absolute;
-width: 370px;
-height: 404px;
-left: 215px;
-top: 696px;
-background: #FFFFFF;
-border: 1px solid #EEEEEE;
 }
 
 .Projekt-Prime {
     position: absolute;
     width: 322px;
     height: 36px;
-    left: 24px;
-    top: 294px;   
+    left: 254px;
+    top: 995px;
+    
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 36px;
-    /* identical to box height, or 200% */   
-    letter-spacing: 0.06em;    
+    /* identical to box height, or 200% */
+    
+    letter-spacing: 0.06em;
+    
     color: #212121;
 }
 
-.Marketing {
+.Marketing1 {
     position: absolute;
-width: 322px;
-height: 30px;
-left: 24px;
-top: 340px;
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 30px;
-/* identical to box height, or 188% */
-letter-spacing: 0.03em;
-color: #757575;
-}
-
-.zdięcze5 {
-    position: absolute;
-    width: 370px;
-    height: 404px;
-    left: 615px;
-    top: 696px;
-    background: #FFFFFF;
-    border: 1px solid #EEEEEE;
+    width: 322px;
+    height: 30px;
+    left: 254px;
+    top: 1035px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    /* identical to box height, or 188% */
+    
+    letter-spacing: 0.03em;
+    
+    color: #757575;
 }
 
 .Projekt-Boxes {
     position: absolute;
     width: 322px;
     height: 36px;
-    left: 24px;
-    top: 294px;    
+    left: 654px;
+    top: 995px;
+    
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 36px;
-    /* identical to box height, or 200% */    
-    letter-spacing: 0.06em;   
+    /* identical to box height, or 200% */
+    
+    letter-spacing: 0.06em;
+    
     color: #212121;
 }
 
@@ -1004,167 +1227,151 @@ color: #757575;
     position: absolute;
     width: 322px;
     height: 30px;
-    left: 24px;
-    top: 340px;   
+    left: 654px;
+    top: 1035px;
+    
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 30px;
-    /* identical to box height, or 188% */    
-    letter-spacing: 0.03em;    
+    /* identical to box height, or 188% */
+    
+    letter-spacing: 0.03em;
+    
     color: #757575;
-}
-
-.zdięcze6 {
-    position: absolute;
-width: 370px;
-height: 404px;
-left: 1015px;
-top: 696px;
-background: #FFFFFF;
-border: 1px solid #EEEEEE;
 }
 
 .Inspiration {
     position: absolute;
     width: 322px;
     height: 36px;
-    left: 24px;
-    top: 294px;    
+    left: 1054px;
+    top: 995px;
+    
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 36px;
-    /* identical to box height, or 200% */    
-    letter-spacing: 0.06em;    
+    /* identical to box height, or 200% */
+    
+    letter-spacing: 0.06em;
+    
     color: #212121;
 }
 
-.Strona-internetowa {
+.Strona-internetowa2 {
     position: absolute;
     width: 322px;
     height: 30px;
-    left: 24px;
-    top: 340px;   
+    left: 1054px;
+    top: 1035px;
+    
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 30px;
-    /* identical to box height, or 188% */    
-    letter-spacing: 0.03em;    
+    /* identical to box height, or 188% */
+    
+    letter-spacing: 0.03em;
+    
     color: #757575;   
-}
-
-.zdięcze7 {
-    position: absolute;
-width: 370px;
-height: 404px;
-left: 215px;
-top: 1130px;
-background: #FFFFFF;
-border: 1px solid #EEEEEE;
 }
 
 .Magazyn {
     position: absolute;
     width: 322px;
     height: 36px;
-    left: 24px;
-    top: 294px;    
+    left: 254px;
+    top: 1430px;
+    
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 36px;
-    /* identical to box height, or 200% */   
-    letter-spacing: 0.06em;    
+    /* identical to box height, or 200% */
+    
+    letter-spacing: 0.06em;
+    
     color: #212121;
 }
 
-.Dizajn {
+.Dizajn2 {
     position: absolute;
     width: 322px;
     height: 30px;
-    left: 24px;
-    top: 340px;    
+    left: 254px;
+    top: 1470px;
+    
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 30px;
-    /* identical to box height, or 188% */    
-    letter-spacing: 0.03em;    
+    /* identical to box height, or 188% */
+    
+    letter-spacing: 0.03em;
+    
     color: #757575;
-}
-
-.zdięcze8 {
-    position: absolute;
-width: 370px;
-height: 404px;
-left: 615px;
-top: 1130px;
-background: #FFFFFF;
-border: 1px solid #EEEEEE;
 }
 
 .Projekt-LAB {
     position: absolute;
     width: 322px;
     height: 36px;
-    left: 24px;
-    top: 294px;    
+    left: 654px;
+    top: 1430px;
+    
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 36px;
-    /* identical to box height, or 200% */    
-    letter-spacing: 0.06em;   
+    /* identical to box height, or 200% */
+    
+    letter-spacing: 0.06em;
+    
     color: #212121;
 }
 
-.Marketing {
+.Marketing2 {
     position: absolute;
     width: 322px;
     height: 30px;
-    left: 24px;
-    top: 340px;    
+    left: 654px;
+    top: 1470px;
+    
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 30px;
-    /* identical to box height, or 188% */    
-    letter-spacing: 0.03em;    
+    /* identical to box height, or 188% */
+    
+    letter-spacing: 0.03em;
+    
     color: #757575;
-}
-
-.zdięcze9 {
-    position: absolute;
-width: 370px;
-height: 404px;
-left: 1015px;
-top: 1130px;
-background: #FFFFFF;
-border: 1px solid #EEEEEE;
 }
 
 .Growing-Business {
     position: absolute;
     width: 322px;
     height: 36px;
-    left: 24px;
-    top: 294px;   
+    left: 1054px;
+    top: 1430px;
+    
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 36px;
-    /* identical to box height, or 200% */    
-    letter-spacing: 0.06em;    
+    /* identical to box height, or 200% */
+    
+    letter-spacing: 0.06em;
+    
     color: #212121;
 }
 
@@ -1172,31 +1379,23 @@ border: 1px solid #EEEEEE;
     position: absolute;
     width: 322px;
     height: 30px;
-    left: 24px;
-    top: 340px;   
+    left: 1054px;
+    top: 1470px;
+    
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 30px;
-    /* identical to box height, or 188% */    
-    letter-spacing: 0.03em;   
+    /* identical to box height, or 188% */
+    
+    letter-spacing: 0.03em;
+    
     color: #757575;
 }
 
-/* listeportfolio */
-
-.zdięcziè1-1 {
-    position: absolute;
-    width: 370px;
-    height: 404px;
-    top: 262px;
-    left: 215px;
-}
-
-
  
-/* adres */
+/* adres portfolio*/
 
 .adres1-1 {
     position: absolute;
@@ -1292,7 +1491,7 @@ color: rgba(255, 255, 255, 0.6);
     color: #FFFFFF;
 }
 
-.Dołącz1 {
+.Dołącz-1 {
     display: flex;
     width: 206px;
     height: 56px;
@@ -1315,4 +1514,42 @@ color: rgba(255, 255, 255, 0.6);
     background: rgba(255, 255, 255, 0.1);
     align-items: center;
     justify-content: center;
+}
+
+
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+    position: absolute;
+    top: 221px;
+    left: 536px;
+    transform: translate(-50% -50%);
+    width: 528px;
+    min-height: 581px;
+    background-color: #FFFFFF;
+}
+
+.close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1) ;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
