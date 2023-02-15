@@ -83,6 +83,7 @@ a {
     width: 1600px;
     height: 600px;
     background-color: #2F303A;
+    background-image: url(../images/car_design.jpg);
 }
 
 .Order_the_service_contents {
