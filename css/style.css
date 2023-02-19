@@ -68,13 +68,23 @@ a {
 }
 
 .link_link {
-    margin-left: 10px;
+    margin-left: 5px;
     color: #757575;
     cursor: cell;
 }
 
 .link_link:hover {
     color: #2196F3;
+}
+
+.link_link_icon {
+    width: 16px;
+    height: 16px;
+    fill: #757575;
+}
+
+.link_link_icon:hover {
+    fill: #2196F3;
 }
 
 /* Order the service */
@@ -273,15 +283,14 @@ a {
     height: 44px;
     margin-top: 16px;
     border-radius: 50%;
+    fill: #afb1b8;
 }
 
 .social_media_icon:hover {
     background-color: #2196F3;
-}
-
-.icon:hover {
     fill: #FFFFFF;
 }
+
 
 /* Our customers */
 
@@ -318,10 +327,12 @@ a {
     height: 92px;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
+    fill: #AFB1B8;
 }
 
 .container_icons:hover {
-color: #2196F3;
+    fill: #2196F3;
+    border: 1px solid #2196F3;
 }
 
 
@@ -403,6 +414,7 @@ color: #2196F3;
     height: 44px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
+    fill: #FFFFFF;
 }
 
 .join_us_icon:hover {
